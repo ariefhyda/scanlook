@@ -2,6 +2,9 @@
  * Semua proses berjalan di browser; file tidak pernah diunggah ke server.
  * Dependensi: pdf.js (dimuat dari CDN di index.html) untuk membaca PDF.
  * PDF hasil ditulis sendiri oleh buildPdf() — satu gambar JPEG per halaman.
+ *
+ * Pembuat : ariefhyda — https://github.com/ariefhyda
+ * Repo    : https://github.com/ariefhyda/scanlook
  */
 'use strict';
 

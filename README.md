@@ -6,6 +6,9 @@ bayangan tepi, warna kertas, dan kompresi JPEG.
 
 Semua proses berjalan **di browser Anda**. File tidak diunggah ke server mana pun.
 
+- **Pembuat:** [ariefhyda](https://github.com/ariefhyda)
+- **Repositori:** [github.com/ariefhyda/scanlook](https://github.com/ariefhyda/scanlook)
+
 ## Cara menjalankan
 
 1. Buka folder `scan-pdf`.
@@ -70,3 +73,8 @@ scan-pdf/
 ├── app.js       logika: baca PDF/gambar, efek scan, rekomendasi, penulis PDF
 └── README.md
 ```
+
+## Pembuat
+
+Dibuat oleh **[ariefhyda](https://github.com/ariefhyda)**.
+Kode sumber, laporan bug, dan saran: <https://github.com/ariefhyda/scanlook>
