@@ -67,12 +67,24 @@ Semua proses berjalan **di browser Anda**. File tidak diunggah ke server mana pu
 
 ## Struktur file
 ```
-scan-pdf/
-├── index.html   tampilan aplikasi
-├── style.css    gaya tampilan (tema putih)
-├── app.js       logika: baca PDF/gambar, efek scan, rekomendasi, penulis PDF
+scanlook/
+├── index.html     aplikasi utama
+├── panduan.html   panduan & tanya jawab
+├── tentang.html   tentang ScanLook dan pembuatnya
+├── privasi.html   kebijakan privasi (AdSense & cookie)
+├── style.css      gaya tampilan (tema putih)
+├── halaman.css    gaya halaman konten
+├── app.js         logika: baca PDF/gambar, efek scan, rekomendasi, penulis PDF
+├── situs.js       tombol pengaturan cookie (CMP Google) & ruang iklan jangkar
+├── ads.txt        otorisasi penjual iklan Google AdSense
+├── robots.txt, sitemap.xml
 └── README.md
 ```
+
+## Situs & iklan
+- Situs: <https://scanlook.vercel.app/>
+- Iklan: Google AdSense (iklan otomatis) dengan pesan izin CMP Google untuk
+  pengunjung EEA, Inggris Raya, dan Swiss.
 
 ## Pembuat
 

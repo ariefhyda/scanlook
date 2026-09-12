@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<title>Panduan: Cara Membuat PDF Seperti Hasil Scan — ScanLook</title>
+<meta name="description" content="Panduan lengkap ScanLook: cara membuat PDF seperti hasil scan, memilih gaya scan dan DPI, arti setiap pengaturan, tips agar hasil natural, dan tanya jawab.">
+<meta name="author" content="ariefhyda">
+<link rel="canonical" href="https://scanlook.vercel.app/panduan.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f7a6a'/%3E%3Cpath d='M10 7h8l4 4v4M10 7v8M7 16h18M10 20v5h12v-5' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="halaman.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9646013999285165"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="site">
+  <header class="topbar sticky">
+    <a class="brand" href="index.html">
+      <span class="logo" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v4"/><path d="M7 3v8"/><path d="M3 12h18"/><path d="M7 16v5h11v-5"/></svg>
+      </span>
+      <div>
+        <h1>ScanLook</h1>
+        <p>Ubah PDF &amp; gambar menjadi seperti hasil scan</p>
+      </div>
+    </a>
+    <div class="top-actions">
+      <nav class="top-nav" aria-label="Navigasi situs">
+        <a href="index.html">Aplikasi</a>
+        <a href="panduan.html" aria-current="page">Panduan</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="privasi.html">Privasi</a>
+      </nav>
+      <a class="gh-link" href="https://github.com/ariefhyda/scanlook" target="_blank" rel="noopener noreferrer" title="Kode sumber ScanLook di GitHub">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <p class="page-kicker">Panduan</p>
+    <h1 class="page-title">Cara Membuat PDF Seperti Hasil Scan dengan ScanLook</h1>
+    <p class="page-lead">ScanLook mengubah PDF digital atau foto dokumen menjadi PDF yang tampak seperti hasil pindaian mesin scanner — lengkap dengan kertas yang sedikit miring, grain halus, dan bayangan tepi. Panduan ini menjelaskan cara memakainya, arti setiap pengaturan, dan tips agar hasilnya terlihat natural.</p>
+    <p class="page-meta">Diperbarui 13 September 2026 · Waktu baca ± 6 menit</p>
+
+    <nav class="toc" aria-label="Daftar isi">
+      <strong>Daftar isi</strong>
+      <ol>
+        <li><a href="#cara-pakai">Cara menggunakan</a></li>
+        <li><a href="#gaya">Memilih gaya scan</a></li>
+        <li><a href="#dpi">Tujuan file &amp; resolusi</a></li>
+        <li><a href="#manual">Arti pengaturan manual</a></li>
+        <li><a href="#tips">Tips agar hasil natural</a></li>
+        <li><a href="#ukuran">Mengatur ukuran file</a></li>
+        <li><a href="#etika">Gunakan secara bertanggung jawab</a></li>
+        <li><a href="#faq">Tanya jawab</a></li>
+      </ol>
+    </nav>
+
+    <div class="prose">
+      <h2 id="cara-pakai">1. Cara menggunakan</h2>
+      <ol>
+        <li><strong>Buka aplikasi</strong> di <a href="index.html">halaman utama ScanLook</a>. Tidak perlu mendaftar atau memasang apa pun.</li>
+        <li><strong>Masukkan file.</strong> Klik <em>Pilih PDF atau gambar</em>, atau seret file ke jendela. Anda bisa memasukkan beberapa file sekaligus (PDF, JPG, PNG, WEBP); halamannya digabung sesuai urutan file ditambahkan. Gambar juga bisa ditempel dengan <code>Ctrl</code> + <code>V</code>.</li>
+        <li><strong>Lihat rekomendasi.</strong> ScanLook menganalisis isi dokumen dan menyarankan gaya scan serta resolusi yang cocok. Klik <em>Terapkan rekomendasi</em> bila setuju.</li>
+        <li><strong>Sesuaikan bila perlu.</strong> Pilih tujuan file, ganti gaya scan, atau ubah slider di bagian <em>Pengaturan manual</em>. Pratinjau diperbarui otomatis.</li>
+        <li><strong>Buat PDF.</strong> Periksa nama file, lalu klik <em>Buat PDF Scan</em>. File langsung tersimpan ke perangkat Anda.</li>
+      </ol>
+      <div class="callout">Semua proses berjalan di browser Anda. Dokumen tidak dikirim ke server mana pun — lihat <a href="privasi.html">Kebijakan Privasi</a>.</div>
+
+      <h2 id="gaya">2. Memilih gaya scan</h2>
+      <p>Gaya scan adalah kumpulan pengaturan siap pakai. Pilih yang paling mendekati kebutuhan, lalu sesuaikan detailnya bila perlu.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Gaya</th><th>Cocok untuk</th><th>Ciri hasil</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Scan Standar</strong></td><td>Surat, formulir, dan dokumen teks pada umumnya</td><td>Abu-abu, sedikit miring, grain halus, bayangan tepi tipis</td></tr>
+            <tr><td><strong>Kantor Rapi</strong></td><td>Dokumen resmi yang ingin tetap terlihat bersih</td><td>Hampir lurus, noise dan debu sangat minim</td></tr>
+            <tr><td><strong>Scan Warna</strong></td><td>Dokumen dengan logo, stempel, tanda tangan biru, atau grafik berwarna</td><td>Warna tetap terlihat, kertas sedikit hangat</td></tr>
+            <tr><td><strong>Fotokopi</strong></td><td>Tampilan salinan hitam-putih</td><td>Kontras tinggi, bintik toner, sudut gelap saat kertas miring</td></tr>
+            <tr><td><strong>Dokumen Lama</strong></td><td>Arsip lama atau kesan dokumen yang sudah berumur</td><td>Kertas menguning, noda samar, cahaya tidak rata</td></tr>
+            <tr><td><strong>Fax</strong></td><td>Kesan hasil kiriman mesin faks</td><td>Resolusi rendah (100 DPI), hitam-putih kasar, garis sensor</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="dpi">3. Tujuan file &amp; resolusi (DPI)</h2>
+      <p>DPI (<em>dots per inch</em>) menentukan ketajaman sekaligus ukuran file. Makin tinggi DPI, makin tajam hasilnya, tetapi file makin besar dan proses makin lama.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Tujuan</th><th>Resolusi</th><th>Kualitas JPEG</th><th>Kapan dipakai</th></tr></thead>
+          <tbody>
+            <tr><td><strong>WA / Email</strong></td><td>150 DPI</td><td>55%</td><td>Dikirim lewat chat, email, atau diunggah ke portal dengan batas ukuran</td></tr>
+            <tr><td><strong>Standar</strong></td><td>200 DPI</td><td>70%</td><td>Pilihan seimbang untuk sebagian besar keperluan</td></tr>
+            <tr><td><strong>Arsip / Cetak</strong></td><td>300 DPI</td><td>85%</td><td>Disimpan jangka panjang atau akan dicetak ulang</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Jika sumbernya berupa foto beresolusi rendah, memilih 300 DPI tidak akan membuatnya lebih tajam — hanya memperbesar file. ScanLook akan menyarankan 150 DPI pada kasus seperti ini.</p>
+
+      <h2 id="manual">4. Arti pengaturan manual</h2>
+      <h3>Warna</h3>
+      <ul>
+        <li><strong>Mode warna</strong> — <em>Warna</em> mempertahankan warna asli, <em>Abu-abu</em> meniru scan grayscale, <em>Hitam-putih</em> meniru fotokopi atau faks.</li>
+        <li><strong>Saturasi</strong> (mode warna) — menurunkan saturasi membuat warna tampak pudar seperti hasil scanner lama.</li>
+        <li><strong>Ambang hitam-putih</strong> (mode hitam-putih) — makin tinggi, makin banyak area yang menjadi hitam; turunkan bila teks terlihat terlalu tebal.</li>
+        <li><strong>Kecerahan &amp; kontras</strong> — mengatur terang-gelap dan ketegasan teks terhadap kertas.</li>
+      </ul>
+      <h3>Kertas &amp; cahaya</h3>
+      <ul>
+        <li><strong>Warna kertas &amp; kekuatannya</strong> — memberi nuansa kertas krem, menguning, atau keabuan.</li>
+        <li><strong>Cahaya tidak rata</strong> — meniru lampu scanner yang sedikit lebih gelap di salah satu sisi atau sudut.</li>
+        <li><strong>Bayangan tepi</strong> — meniru bayangan dari tutup scanner yang tidak rapat.</li>
+        <li><strong>Latar pemindai</strong> — warna yang tampak di sudut ketika kertas miring (putih, abu-abu, atau hitam).</li>
+      </ul>
+      <h3>Posisi kertas</h3>
+      <ul>
+        <li><strong>Kemiringan maks.</strong> — sudut kemiringan kertas dalam derajat.</li>
+        <li><strong>Pergeseran maks.</strong> — seberapa jauh kertas bergeser dari tengah, dalam milimeter.</li>
+        <li><strong>Acak berbeda di tiap halaman</strong> — setiap halaman mendapat sudut dan posisi yang sedikit berbeda, seperti ketika kertas diletakkan satu per satu.</li>
+      </ul>
+      <h3>Tekstur &amp; kotoran</h3>
+      <ul>
+        <li><strong>Noise / grain</strong> — butiran halus dari sensor scanner.</li>
+        <li><strong>Debu &amp; bintik</strong> — titik, serat, dan noda samar dari kaca scanner.</li>
+        <li><strong>Garis scanner</strong> — garis vertikal tipis akibat kaca pemindai yang kotor.</li>
+        <li><strong>Blur</strong> — melembutkan tepi huruf seperti optik scanner.</li>
+      </ul>
+      <h3>Output</h3>
+      <ul>
+        <li><strong>Resolusi &amp; kualitas JPEG</strong> — lihat bagian <a href="#dpi">tujuan file</a>.</li>
+        <li><strong>Ukuran kertas</strong> — ikuti dokumen asli, atau paksa menjadi A4, F4/Folio, Letter, maupun Legal.</li>
+        <li><strong>Variasi acak</strong> — angka yang menentukan posisi debu, arah miring, dan pola noise. Angka yang sama selalu menghasilkan tampilan yang sama; klik <em>Acak ulang</em> untuk variasi lain.</li>
+      </ul>
+      <p>Pengaturan yang Anda sukai bisa disimpan dengan tombol <em>Simpan sebagai preset</em>. Klik dua kali pada slider untuk mengembalikan nilai bawaannya.</p>
+
+      <h2 id="tips">5. Tips agar hasil terlihat natural</h2>
+      <ul>
+        <li><strong>Jangan berlebihan.</strong> Hasil scan asli biasanya cukup rapi. Kemiringan 0,5–1,5° dan noise 5–15 umumnya sudah terasa nyata.</li>
+        <li><strong>Pakai mode abu-abu untuk dokumen teks</strong>, dan mode warna bila ada stempel atau tanda tangan berwarna.</li>
+        <li><strong>Aktifkan variasi per halaman</strong> untuk dokumen banyak halaman, agar tidak terlihat seragam.</li>
+        <li><strong>Periksa detail</strong> dengan tombol <em>Zoom 100%</em>, dan tahan tombol <em>lihat asli</em> untuk membandingkan dengan dokumen awal.</li>
+        <li><strong>Periksa keterbacaan.</strong> Pastikan angka dan teks kecil tetap jelas setelah efek diterapkan.</li>
+      </ul>
+
+      <h2 id="ukuran">6. Mengatur ukuran file</h2>
+      <p>Setiap halaman PDF hasil berupa gambar JPEG. Pada pengaturan Standar, satu halaman A4 berisi teks biasanya berukuran sekitar 150–400 KB. Perkiraan ukuran selalu ditampilkan di samping tombol <em>Buat PDF Scan</em>. Untuk memperkecil file:</p>
+      <ul>
+        <li>Pilih tujuan <strong>WA / Email</strong> (150 DPI, kualitas 55%).</li>
+        <li>Kurangi <strong>noise</strong> — butiran acak adalah bagian yang paling sulit dikompres.</li>
+        <li>Gunakan mode <strong>abu-abu</strong> atau <strong>hitam-putih</strong> bila warna tidak diperlukan.</li>
+        <li>Kecualikan halaman yang tidak perlu dengan tombol <strong>×</strong> pada thumbnail.</li>
+      </ul>
+
+      <h2 id="etika">7. Gunakan secara bertanggung jawab</h2>
+      <div class="callout warn">
+        ScanLook dibuat untuk kebutuhan yang sah, misalnya menyeragamkan tampilan arsip, menyiapkan contoh desain, atau memenuhi format unggahan. <strong>Jangan gunakan ScanLook untuk memalsukan dokumen, tanda tangan, atau stempel, maupun untuk mengelabui pihak lain</strong> seolah-olah dokumen digital adalah hasil pindaian dokumen asli. Pemalsuan surat dan dokumen merupakan tindak pidana. Pengguna bertanggung jawab penuh atas penggunaan hasilnya.
+      </div>
+
+      <h2 id="faq">8. Tanya jawab</h2>
+      <div class="faq">
+        <details>
+          <summary>Apakah file saya diunggah ke server?</summary>
+          <div><p>Tidak. Seluruh proses — membaca PDF, menerapkan efek, dan membuat PDF baru — berjalan di browser pada perangkat Anda. Dokumen tidak pernah dikirim ke server.</p></div>
+        </details>
+        <details>
+          <summary>Apakah ScanLook gratis?</summary>
+          <div><p>Ya, gratis tanpa batas jumlah file dan tanpa tanda air. Situs ini didukung oleh iklan, dan kode sumbernya terbuka di <a href="https://github.com/ariefhyda/scanlook" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></div>
+        </details>
+        <details>
+          <summary>Kenapa teks di PDF hasil tidak bisa diseleksi atau dicari?</summary>
+          <div><p>Karena setiap halaman diubah menjadi gambar, sama seperti hasil scanner sungguhan. Simpan juga file aslinya bila Anda masih memerlukan teks yang bisa dicari.</p></div>
+        </details>
+        <details>
+          <summary>PDF saya dilindungi kata sandi, bisakah diproses?</summary>
+          <div><p>Belum. Buka proteksi kata sandi PDF terlebih dahulu menggunakan aplikasi pembaca PDF, lalu masukkan file yang sudah tidak terkunci.</p></div>
+        </details>
+        <details>
+          <summary>Apakah bisa dipakai di HP?</summary>
+          <div><p>Bisa, melalui browser modern seperti Chrome, Edge, Safari, atau Firefox. Untuk dokumen dengan banyak halaman, komputer akan memproses lebih cepat.</p></div>
+        </details>
+        <details>
+          <summary>Kenapa hasil tiap halaman terlihat sedikit berbeda?</summary>
+          <div><p>Opsi <em>Acak berbeda di tiap halaman</em> sengaja memberi sudut dan posisi berbeda agar terlihat alami. Matikan opsi tersebut bila ingin semua halaman seragam.</p></div>
+        </details>
+        <details>
+          <summary>Format apa saja yang didukung?</summary>
+          <div><p>PDF, JPG/JPEG, PNG, WEBP, GIF, dan BMP. Format HEIC dari iPhone belum didukung oleh sebagian besar browser — ubah dulu ke JPG.</p></div>
+        </details>
+        <details>
+          <summary>Apakah perlu koneksi internet?</summary>
+          <div><p>Koneksi diperlukan saat membuka situs dan untuk memuat pustaka pembaca PDF. Setelah itu, pemrosesan dokumen berlangsung di perangkat Anda.</p></div>
+        </details>
+      </div>
+
+      <div class="cta">
+        <p>Siap mencoba? Ubah dokumen pertama Anda sekarang.</p>
+        <a class="btn primary" href="index.html">Buka ScanLook</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="who">© 2026 ScanLook · Dibuat oleh <a href="https://github.com/ariefhyda" target="_blank" rel="noopener noreferrer">ariefhyda</a></div>
+      <nav aria-label="Tautan kaki">
+        <a href="index.html">Aplikasi</a>
+        <a href="panduan.html">Panduan</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="privasi.html">Kebijakan Privasi</a>
+        <button type="button" data-consent-settings>Pengaturan cookie</button>
+        <a href="https://github.com/ariefhyda/scanlook" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<script src="situs.js"></script>
+</body>
+</html>

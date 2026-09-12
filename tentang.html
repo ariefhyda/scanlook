@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<title>Tentang ScanLook — Pembuat PDF Seperti Hasil Scan</title>
+<meta name="description" content="Tentang ScanLook: alat gratis dan sumber terbuka untuk membuat PDF seperti hasil scan langsung di browser, dibuat oleh ariefhyda.">
+<meta name="author" content="ariefhyda">
+<link rel="canonical" href="https://scanlook.vercel.app/tentang.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f7a6a'/%3E%3Cpath d='M10 7h8l4 4v4M10 7v8M7 16h18M10 20v5h12v-5' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="halaman.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9646013999285165"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="site">
+  <header class="topbar sticky">
+    <a class="brand" href="index.html">
+      <span class="logo" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v4"/><path d="M7 3v8"/><path d="M3 12h18"/><path d="M7 16v5h11v-5"/></svg>
+      </span>
+      <div>
+        <h1>ScanLook</h1>
+        <p>Ubah PDF &amp; gambar menjadi seperti hasil scan</p>
+      </div>
+    </a>
+    <div class="top-actions">
+      <nav class="top-nav" aria-label="Navigasi situs">
+        <a href="index.html">Aplikasi</a>
+        <a href="panduan.html">Panduan</a>
+        <a href="tentang.html" aria-current="page">Tentang</a>
+        <a href="privasi.html">Privasi</a>
+      </nav>
+      <a class="gh-link" href="https://github.com/ariefhyda/scanlook" target="_blank" rel="noopener noreferrer" title="Kode sumber ScanLook di GitHub">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <p class="page-kicker">Tentang</p>
+    <h1 class="page-title">Tentang ScanLook</h1>
+    <p class="page-lead">ScanLook adalah alat gratis dan sumber terbuka untuk mengubah PDF atau gambar menjadi PDF yang tampak seperti hasil pindaian scanner — langsung di browser, tanpa mengunggah dokumen ke mana pun.</p>
+    <p class="page-meta">Dibuat oleh <a href="https://github.com/ariefhyda" target="_blank" rel="noopener noreferrer">ariefhyda</a> · Diperbarui 13 September 2026</p>
+
+    <div class="prose">
+      <h2 id="apa">Apa itu ScanLook?</h2>
+      <p>Banyak dokumen kini dibuat secara digital, tetapi tampilannya terasa terlalu "bersih" bila disandingkan dengan arsip hasil pindaian. ScanLook membantu menyeragamkan tampilan tersebut: kertas sedikit miring, butiran halus dari sensor, bayangan tepi, hingga warna kertas yang hangat — semuanya bisa diatur, atau cukup memakai rekomendasi otomatis.</p>
+      <p>Aplikasi ini dirancang agar mudah dipakai siapa saja: masukkan file, pilih gaya scan, lalu unduh PDF-nya. Untuk yang ingin kendali penuh, tersedia pengaturan manual lengkap. Cara pemakaiannya dijelaskan di <a href="panduan.html">Panduan</a>.</p>
+
+      <h2 id="privasi">Privasi sebagai prioritas</h2>
+      <p>Dokumen sering berisi data penting. Karena itu ScanLook sengaja dibuat agar <strong>seluruh pemrosesan terjadi di perangkat Anda</strong>. Tidak ada server yang menerima, menyimpan, atau membaca dokumen Anda, dan tidak perlu membuat akun. Rincian lengkap tersedia di <a href="privasi.html">Kebijakan Privasi</a>.</p>
+
+      <h2 id="cara-kerja">Cara kerjanya</h2>
+      <ul>
+        <li><strong>Membaca dokumen</strong> — PDF dirender menggunakan pustaka sumber terbuka <a href="https://mozilla.github.io/pdf.js/" target="_blank" rel="noopener noreferrer">pdf.js</a> dari Mozilla; gambar dibaca langsung oleh browser.</li>
+        <li><strong>Menerapkan efek</strong> — setiap halaman digambar ulang pada kanvas HTML: diputar dan digeser sedikit, diberi debu, garis sensor, cahaya tidak rata, bayangan tepi, warna kertas, kontras, dan noise.</li>
+        <li><strong>Hasil yang konsisten</strong> — efek acak dikendalikan oleh angka <em>variasi</em>, sehingga pengaturan yang sama selalu memberi hasil yang sama.</li>
+        <li><strong>Menyusun PDF</strong> — setiap halaman dikompres menjadi JPEG, lalu dirangkai menjadi file PDF oleh ScanLook sendiri, tanpa layanan eksternal.</li>
+        <li><strong>Rekomendasi otomatis</strong> — ScanLook memeriksa apakah dokumen mengandung warna, foto, atau hanya teks, serta jumlah halamannya, untuk menyarankan gaya dan resolusi yang paling cocok.</li>
+      </ul>
+
+      <h2 id="sumber-terbuka">Sumber terbuka</h2>
+      <p>Seluruh kode ScanLook dapat dilihat, dipelajari, dan dikembangkan di <a href="https://github.com/ariefhyda/scanlook" target="_blank" rel="noopener noreferrer">github.com/ariefhyda/scanlook</a>. Keterbukaan ini juga memungkinkan siapa pun memastikan bahwa dokumen memang tidak dikirim ke mana pun. Saran fitur dan laporan bug sangat diterima melalui halaman <a href="https://github.com/ariefhyda/scanlook/issues" target="_blank" rel="noopener noreferrer">Issues</a>.</p>
+
+      <h2 id="pembuat">Pembuat</h2>
+      <p>ScanLook dibuat dan dikelola oleh <strong><a href="https://github.com/ariefhyda" target="_blank" rel="noopener noreferrer">ariefhyda</a></strong>. Profil dan proyek lainnya dapat dilihat di GitHub.</p>
+
+      <h2 id="dukungan">Iklan dan dukungan</h2>
+      <p>ScanLook gratis untuk semua orang. Iklan yang tampil di situs ini membantu menutup biaya dan waktu pengembangan. Iklan tidak pernah memiliki akses ke dokumen yang Anda proses.</p>
+
+      <h2 id="kontak">Kontak</h2>
+      <p>Punya pertanyaan, masukan, atau menemukan masalah? Sampaikan melalui <a href="https://github.com/ariefhyda/scanlook/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a>. Mohon jangan melampirkan dokumen pribadi atau informasi sensitif di laporan publik.</p>
+
+      <div class="callout warn">ScanLook ditujukan untuk penggunaan yang sah. Jangan menggunakannya untuk memalsukan dokumen atau mengelabui pihak lain.</div>
+
+      <div class="cta">
+        <p>Coba ubah dokumen Anda menjadi seperti hasil scan.</p>
+        <a class="btn primary" href="index.html">Buka ScanLook</a>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="who">© 2026 ScanLook · Dibuat oleh <a href="https://github.com/ariefhyda" target="_blank" rel="noopener noreferrer">ariefhyda</a></div>
+      <nav aria-label="Tautan kaki">
+        <a href="index.html">Aplikasi</a>
+        <a href="panduan.html">Panduan</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="privasi.html">Kebijakan Privasi</a>
+        <button type="button" data-consent-settings>Pengaturan cookie</button>
+        <a href="https://github.com/ariefhyda/scanlook" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<script src="situs.js"></script>
+</body>
+</html>
