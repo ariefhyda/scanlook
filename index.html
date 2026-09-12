@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<title>ScanLook — PDF seperti hasil scan</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f7a6a'/%3E%3Cpath d='M10 7h8l4 4v4M10 7v8M7 16h18M10 20v5h12v-5' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v4"/><path d="M7 3v8"/><path d="M3 12h18"/><path d="M7 16v5h11v-5"/></svg>
+      </span>
+      <div>
+        <h1>ScanLook</h1>
+        <p>Ubah PDF &amp; gambar menjadi seperti hasil scan</p>
+      </div>
+    </div>
+    <div class="privacy">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      Diproses di perangkat Anda — file tidak diunggah ke mana pun
+    </div>
+  </header>
+
+  <div class="main">
+    <aside class="panel">
+      <section class="card">
+        <div class="card-head">
+          <h2><span class="step">1</span> File</h2>
+          <button type="button" class="link-btn" id="clearAll" hidden>Hapus semua</button>
+        </div>
+        <input type="file" id="fileInput" accept="application/pdf,.pdf,image/*" multiple hidden>
+        <button type="button" class="dropzone" id="dropzone">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V4"/><path d="m7 9 5-5 5 5"/><path d="M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg>
+          <strong>Pilih PDF atau gambar</strong>
+          <span>atau seret file ke jendela ini · bisa lebih dari satu</span>
+        </button>
+        <ul class="file-list" id="fileList"></ul>
+        <button type="button" class="link-btn sample-link" id="sampleBtn">Belum punya file? Coba dengan dokumen contoh</button>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2><span class="step">2</span> Rekomendasi</h2>
+        </div>
+        <div class="rec" id="recBox"></div>
+        <div class="field-label">Tujuan file</div>
+        <div class="seg purpose" id="purposeSeg" role="radiogroup" aria-label="Tujuan file"></div>
+        <div class="field-label">Gaya scan</div>
+        <div class="preset-grid" id="presetGrid"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2><span class="step">3</span> Pengaturan manual</h2>
+          <span class="badge" id="customBadge" hidden>Kustom</span>
+        </div>
+        <div id="controls"></div>
+        <div class="row-actions">
+          <button type="button" class="btn" id="resetBtn">Reset ke bawaan</button>
+          <button type="button" class="btn" id="savePresetBtn">Simpan sebagai preset</button>
+        </div>
+        <p class="tiny">Tips: klik dua kali pada slider untuk mengembalikan nilai bawaannya.</p>
+      </section>
+    </aside>
+
+    <section class="stage">
+      <div class="toolbar">
+        <div class="pager">
+          <button type="button" class="icon-btn" id="prevBtn" title="Halaman sebelumnya (←)" aria-label="Halaman sebelumnya">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <span id="pageLabel" class="page-label">Belum ada file</span>
+          <button type="button" class="icon-btn" id="nextBtn" title="Halaman berikutnya (→)" aria-label="Halaman berikutnya">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <span class="note" id="excludedNote" hidden>Tidak disertakan di PDF</span>
+        </div>
+        <div class="tools">
+          <span class="status" id="status"></span>
+          <button type="button" class="btn sm" id="compareBtn" title="Tahan tombol ini untuk melihat dokumen asli">Tahan: lihat asli</button>
+          <button type="button" class="btn sm" id="zoomBtn">Zoom 100%</button>
+        </div>
+      </div>
+
+      <div class="viewer-wrap">
+        <div class="viewer" id="viewer">
+          <div class="empty" id="emptyState">
+            <svg class="empty-art" width="120" height="120" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+              <rect x="30" y="14" width="60" height="80" rx="4" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5" transform="rotate(-3 60 54)"/>
+              <g transform="rotate(-3 60 54)" stroke="var(--faint)" stroke-width="2.4" stroke-linecap="round">
+                <path d="M40 30h28"/><path d="M40 40h40"/><path d="M40 48h36"/><path d="M40 56h40"/><path d="M40 64h22"/>
+              </g>
+              <rect x="18" y="98" width="84" height="8" rx="4" fill="var(--accent)" opacity=".85"/>
+              <rect x="24" y="72" width="72" height="3" rx="1.5" fill="var(--accent)" opacity=".55"/>
+            </svg>
+            <h3>Seret PDF atau gambar ke sini</h3>
+            <p>Pratinjau hasil scan akan tampil di sini. Semua proses berjalan di browser — tidak ada file yang dikirim ke internet.</p>
+            <div class="empty-actions">
+              <button type="button" class="btn primary" id="emptyPick">Pilih file</button>
+              <button type="button" class="btn" id="emptySample">Coba dokumen contoh</button>
+            </div>
+          </div>
+          <canvas id="outCanvas" hidden></canvas>
+          <img id="outImg" alt="Pratinjau hasil scan" hidden>
+          <canvas id="origCanvas" hidden></canvas>
+        </div>
+        <span class="viewer-badge" id="origBadge" hidden>Dokumen asli</span>
+        <div class="working" id="spinner" hidden><i></i>Memproses…</div>
+      </div>
+
+      <div class="thumbs" id="thumbs" hidden></div>
+
+      <div class="actionbar">
+        <label class="fname">
+          <span>Nama file</span>
+          <input id="fileName" type="text" value="dokumen_scan.pdf" spellcheck="false">
+        </label>
+        <div class="est" id="estimate"></div>
+        <div class="progress" id="progress" hidden>
+          <div class="bar"><i id="progressBar"></i></div>
+          <span id="progressText"></span>
+          <button type="button" class="link-btn" id="cancelBtn">Batal</button>
+        </div>
+        <a class="btn" id="downloadLink" hidden>Unduh lagi</a>
+        <button type="button" class="btn primary" id="generateBtn" disabled>Buat PDF Scan</button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="drop-overlay" id="dropOverlay" hidden><div>Lepaskan untuk menambahkan file</div></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="app.js"></script>
+</body>
+</html>
