@@ -75,6 +75,32 @@ body { padding-top: var(--ad-top, 0px); padding-bottom: var(--ad-bottom, 0px); }
 .credit a { color: var(--accent); font-weight: 600; text-decoration: none; }
 .credit a:hover { text-decoration: underline; }
 .credit .credit-repo { font-weight: 500; color: var(--faint); }
+/* ------------------------------------------------------------ penghitung pengunjung */
+.visitors { border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; background: var(--surface); }
+.visitors .vs-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+.visitors .vs-title { margin: 0; font-size: 13.5px; line-height: 1.3; letter-spacing: 0; color: var(--text); }
+.visitors .vs-live { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; color: var(--ok); }
+.visitors .vs-live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.visitors .vs-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 12px; }
+.visitors .vs-stats div { padding: 8px 10px; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--border); min-width: 0; }
+.visitors .vs-stats strong { display: block; font-size: 17px; line-height: 1.2; color: var(--text); font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; }
+.visitors .vs-stats span { font-size: 11px; color: var(--muted); }
+.visitors .vs-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.visitors .vs-list li {
+  position: relative; display: flex; align-items: center; gap: 8px; margin: 0; padding: 5px 8px;
+  border-radius: 6px; overflow: hidden; font-size: 12.5px; line-height: 1.4;
+}
+.visitors .vs-list li::before { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--w, 0); background: var(--accent-soft); }
+.visitors .vs-list li > * { position: relative; }
+.visitors .vs-cc {
+  flex: none; min-width: 26px; text-align: center; padding: 1px 4px; border-radius: 4px; font-size: 10px; font-weight: 700;
+  letter-spacing: .03em; color: var(--muted); background: var(--surface); border: 1px solid var(--border-strong);
+}
+.visitors .vs-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text); }
+.visitors .vs-num { flex: none; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+.visitors .vs-more summary { cursor: pointer; margin: 8px 0 6px; font-size: 12px; font-weight: 600; color: var(--accent); }
+.visitors .vs-note { margin: 10px 0 0; font-size: 11px; line-height: 1.4; color: var(--faint); }
+
 .credit-links { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 6px; }
 .credit .credit-links a, .credit .credit-links button { font-weight: 500; color: var(--muted); font-size: 12px; }
 .credit .credit-links button { border: 0; background: none; padding: 0; cursor: pointer; font-family: inherit; }

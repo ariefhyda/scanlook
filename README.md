@@ -75,7 +75,8 @@ scanlook/
 ├── style.css      gaya tampilan (tema putih)
 ├── halaman.css    gaya halaman konten
 ├── app.js         logika: baca PDF/gambar, efek scan, rekomendasi, penulis PDF
-├── situs.js       tombol pengaturan cookie (CMP Google) & ruang iklan jangkar
+├── situs.js       pengaturan cookie (CMP Google), ruang iklan jangkar, widget pengunjung
+├── api/counter.js penghitung pengunjung total & per negara (Vercel Function + Upstash Redis)
 ├── ads.txt        otorisasi penjual iklan Google AdSense
 ├── robots.txt, sitemap.xml
 └── README.md
@@ -85,6 +86,9 @@ scanlook/
 - Situs: <https://scanlook.vercel.app/>
 - Iklan: Google AdSense (iklan otomatis) dengan pesan izin CMP Google untuk
   pengunjung EEA, Inggris Raya, dan Swiss.
+- Penghitung pengunjung: `/api/counter` — tanpa cookie, IP tidak disimpan.
+  Butuh database Upstash Redis yang dihubungkan ke proyek Vercel
+  (variabel `KV_REST_API_URL` dan `KV_REST_API_TOKEN`), opsional `COUNTER_SALT`.
 
 ## Pembuat
 
